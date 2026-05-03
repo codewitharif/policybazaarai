@@ -1,0 +1,311 @@
+{
+  "categories": [
+    {
+      "name": "Term Insurance",
+      "eligibility": "Minimum age 18 years, Maximum age up to 65 years. Policy term can range from 5 to 40 years.",
+      "benefits": [
+        "High life cover at very low premiums.",
+        "Financial security for the family in case of the policyholder's death.",
+        "Tax benefits under Section 80C.",
+        "Optional riders like accidental death benefit and critical illness cover.",
+        "Death benefit paid as a lump sum or monthly income."
+      ],
+      "waiting_period": "No waiting period for death benefit (except suicide in the first 12 months).",
+      "exclusions": [
+        "Suicide within the first year of the policy.",
+        "Death due to participation in illegal acts.",
+        "Death due to war or nuclear explosion.",
+        "Self-inflicted injuries."
+      ],
+      "claim_process": "1. Nominee informs the insurer about the death. 2. Submit death certificate and claim form. 3. Insurer verifies the claim. 4. Payout is processed to the nominee's bank account.",
+      "documents_required": [
+        "Death Certificate",
+        "Original Policy Document",
+        "Identity & Address proof of Nominee",
+        "Bank account details (Cancelled Cheque)",
+        "Medical reports (if death was due to illness)"
+      ],
+      "riders_addons": [
+        "Accidental Death Benefit",
+        "Waiver of Premium on Disability",
+        "Critical Illness Rider",
+        "Income Benefit Rider"
+      ],
+      "tax_savings": "Premiums paid are tax-exempt up to ₹1.5 Lakh under Section 80C. The death benefit received by the nominee is tax-free under Section 10(10D).",
+      "free_look_period": "15 to 30 days from the receipt of the policy document to review and cancel if unsatisfied.",
+      "renewal_terms": "Annual renewal required. A grace period of 15 to 30 days is typically provided for premium payment after the due date."
+    },
+    {
+      "name": "Investment Plans",
+      "eligibility": "Available for individuals aged 18 to 60 years. Can be started for minors by parents/legal guardians.",
+      "benefits": [
+        "Wealth creation over a long period.",
+        "Market-linked returns (ULIPs) or guaranteed returns (Endowment).",
+        "Life cover along with investment growth.",
+        "Tax benefits on both investment and maturity.",
+        "Flexibility to switch between funds (in ULIPs)."
+      ],
+      "waiting_period": "Lock-in period of 5 years for ULIPs. No specific waiting period for the life cover component.",
+      "exclusions": [
+        "Market risks associated with investments in ULIPs.",
+        "Suicide exclusion for the life cover component in the first year.",
+        "Partial withdrawals not allowed during the initial lock-in period."
+      ],
+      "claim_process": "1. Submit maturity claim form or death claim form. 2. Provide original policy document and bank details. 3. Insurer verifies and processes payment. 4. Funds transferred via NEFT.",
+      "documents_required": [
+        "Original Policy Document",
+        "Identity Proof (Aadhaar/PAN)",
+        "Bank Account Details (Cancelled Cheque)",
+        "Discharge Form for maturity payout"
+      ],
+      "riders_addons": [
+        "Accidental Death Cover",
+        "Term Rider",
+        "Premium Payor Benefit (for minor policies)"
+      ],
+      "tax_savings": "Tax benefits under Section 80C for premiums. Maturity proceeds are generally tax-free under Section 10(10D) if the premium is less than 10% of sum insured.",
+      "free_look_period": "15 days for physical policies and 30 days for policies sourced through electronic/distance marketing.",
+      "renewal_terms": "Policy remains active as long as premiums are paid. Grace period of 30 days for annual payment modes."
+    },
+    {
+      "name": "Saving Plans",
+      "eligibility": "Minimum age 18 years, Maximum age 60 years. Suitable for conservative investors seeking safety.",
+      "benefits": [
+        "Guaranteed maturity benefits and bonuses.",
+        "Disciplined savings with life insurance protection.",
+        "Tax-free returns under Section 10(10D).",
+        "Loan facility available against the policy after a few years.",
+        "Fixed returns regardless of market volatility."
+      ],
+      "waiting_period": "Generally no waiting period for life cover. Maturity benefit paid at the end of the policy term.",
+      "exclusions": [
+        "Lower returns compared to market-linked plans.",
+        "High surrender charges if the policy is closed before a certain period.",
+        "Suicide exclusion in the first year."
+      ],
+      "claim_process": "1. Notify insurer on maturity or death. 2. Submit policy bond and ID proofs. 3. Insurer processes the payout based on policy terms. 4. Funds credited directly to the bank.",
+      "documents_required": [
+        "Original Policy Bond",
+        "Identity Proof",
+        "Address Proof",
+        "Cancelled Cheque",
+        "KYC of the policyholder"
+      ],
+      "riders_addons": [
+        "Family Income Benefit",
+        "Accidental Disability Rider",
+        "Critical Illness Rider"
+      ],
+      "tax_savings": "Deductions under Section 80C for premiums paid. Maturity proceeds are generally tax-free under Section 10(10D).",
+      "free_look_period": "15 days from the date of policy document receipt.",
+      "renewal_terms": "Regular premium payments required to keep the policy in force. Grace period of 30 days for annual modes."
+    },
+    {
+      "name": "Individual Health Insurance",
+      "eligibility": "Individuals between 18 to 65 years. Children above 91 days can be covered as dependents.",
+      "benefits": [
+        "Personalized coverage for a single person.",
+        "Cashless treatment in over 10,000+ network hospitals.",
+        "Pre and post-hospitalization expense coverage.",
+        "No-claim bonus (NCB) for every claim-free year.",
+        "Annual health check-ups and tax savings under 80D."
+      ],
+      "waiting_period": "30 days initial waiting period. 2-4 years for pre-existing diseases. 1-2 years for specific illnesses (like Hernia, Cataract).",
+      "exclusions": [
+        "Cosmetic or aesthetic treatments.",
+        "Injuries due to self-harm or suicide attempts.",
+        "Addiction-related treatments (alcohol, drugs).",
+        "Congenital external diseases or defects."
+      ],
+      "claim_process": "1. For Cashless: Inform TPA at network hospital. 2. For Reimbursement: Submit all bills and discharge summary within 15 days of discharge.",
+      "documents_required": [
+        "Health Card",
+        "Discharge Summary",
+        "Original Bills and Payment Receipts",
+        "Prescriptions and Diagnostic Reports",
+        "KYC of the insured"
+      ],
+      "riders_addons": [
+        "Maternity Cover",
+        "OPD Cover",
+        "Consumables Cover (Zero Debt on Health)",
+        "Personal Accident Rider"
+      ],
+      "tax_savings": "Deduction up to ₹25,000 (Self/Family) and additional ₹25,000-₹50,000 for parents under Section 80D.",
+      "free_look_period": "15 days for a 1-year policy term to review the coverage.",
+      "renewal_terms": "Life-long renewability is guaranteed. A grace period of 30 days is given for renewal after expiry."
+    },
+    {
+      "name": "Family Floater Insurance",
+      "eligibility": "Covers self, spouse, children, and sometimes dependent parents. Adult entry age 18-65 years.",
+      "benefits": [
+        "Single policy for the entire family with shared sum insured.",
+        "More affordable than individual policies for multiple members.",
+        "Automatic restoration of sum insured if exhausted during the year.",
+        "Maternity and newborn cover available as optional add-ons.",
+        "All family members get access to cashless network hospitals."
+      ],
+      "waiting_period": "Same as individual health (30 days initial, 2-4 years for PED).",
+      "exclusions": [
+        "Treatment for infertility or maternity (unless specific add-on is chosen).",
+        "Non-medical expenses like registration fees or administrative charges.",
+        "Pre-existing diseases not disclosed during policy purchase."
+      ],
+      "claim_process": "1. Any insured family member can initiate a claim. 2. Cashless at network hospitals or reimbursement process. 3. Total sum insured shared across all members.",
+      "documents_required": [
+        "Policy Copy",
+        "Hospital Bills",
+        "Discharge Summary",
+        "KYC of the primary insured",
+        "Investigation/Lab Reports"
+      ],
+      "riders_addons": [
+        "Restoration of Sum Insured",
+        "No Claim Bonus Protector",
+        "Daily Hospital Cash",
+        "Air Ambulance Cover"
+      ],
+      "tax_savings": "Tax deduction up to ₹25,000 - ₹75,000 under Section 80D depending on the age of family members.",
+      "free_look_period": "15 days to review terms and conditions from the date of receipt.",
+      "renewal_terms": "Life-long renewability. Premiums may increase as the eldest member enters a higher age bracket."
+    },
+    {
+      "name": "Critical Illness Insurance",
+      "eligibility": "Individuals aged 18 to 65 years. Often requires a pre-policy medical check-up.",
+      "benefits": [
+        "Lump-sum payment upon diagnosis of a covered illness (e.g., Cancer, Heart Attack).",
+        "Payout can be used for treatment, debt repayment, or loss of income.",
+        "Works as a supplement to your regular health insurance.",
+        "Covers expensive treatments not fully covered by standard plans.",
+        "Fixed benefit regardless of actual hospital bills incurred."
+      ],
+      "waiting_period": "Generally 90 days from the policy start date. A survival period (usually 30 days) is required after diagnosis.",
+      "exclusions": [
+        "Critical illnesses diagnosed within the initial 90-day waiting period.",
+        "Conditions due to smoking or tobacco use (for specific respiratory/cancer covers).",
+        "Pre-existing critical conditions or congenital diseases.",
+        "Self-inflicted injuries or attempted suicide."
+      ],
+      "claim_process": "1. Diagnosis of covered illness. 2. Complete survival period. 3. Submit medical reports and diagnosis certificate. 4. Lump-sum payout to the insured.",
+      "documents_required": [
+        "Medical Certificate confirming diagnosis",
+        "Histopathology or Lab reports",
+        "Policy Document",
+        "KYC documents and bank details"
+      ],
+      "riders_addons": [
+        "Second Medical Opinion from global experts",
+        "Waiver of Premium",
+        "Accidental Disability Cover"
+      ],
+      "tax_savings": "Premiums qualify for deduction under Section 80D of the Income Tax Act.",
+      "free_look_period": "15 days for standard policies to review the illness list.",
+      "renewal_terms": "Annual renewal. Most plans offer life-long renewability, while some may end at age 65 or 70."
+    },
+    {
+      "name": "Car Insurance",
+      "eligibility": "Any individual or organization owning a registered car in India. Owner must have a valid DL.",
+      "benefits": [
+        "Third-party liability coverage (Mandatory by law).",
+        "Own Damage coverage for theft, accident, fire, and natural disasters.",
+        "Personal Accident cover for the owner-driver.",
+        "Add-ons like Zero Depreciation and Engine Protect.",
+        "Cashless repairs at 5000+ authorized network garages."
+      ],
+      "waiting_period": "No waiting period. Coverage for accidents and theft starts immediately.",
+      "exclusions": [
+        "Driving without a valid license or under influence of alcohol.",
+        "Mechanical or electrical breakdown not caused by accident.",
+        "Normal wear and tear and aging of the vehicle.",
+        "Usage outside the geographical area or for illegal purposes."
+      ],
+      "claim_process": "1. Inform insurer immediately. 2. Surveyor inspects damage. 3. Cashless repair at network garage or reimbursement. 4. FIR required for theft/third-party injury.",
+      "documents_required": [
+        "Driving License",
+        "Registration Certificate (RC) of the car",
+        "Policy Copy",
+        "FIR (if third-party is involved or theft)",
+        "Estimate of repairs from the garage"
+      ],
+      "riders_addons": [
+        "Zero Depreciation (Bumper to Bumper)",
+        "Engine Protect",
+        "Roadside Assistance",
+        "Return to Invoice",
+        "Consumables Cover"
+      ],
+      "tax_savings": "No tax benefits for personal cars. Business owners can claim premiums as a business expense to reduce taxable income.",
+      "free_look_period": "Not standard for annual motor policies; usually applies to multi-year policies only.",
+      "renewal_terms": "Annual renewal required. Policy expires if not renewed. No Claim Bonus (NCB) is lost if not renewed within 90 days of expiry."
+    },
+    {
+      "name": "Bike Insurance",
+      "eligibility": "Registered owner of a two-wheeler. Rider must have a valid driving license.",
+      "benefits": [
+        "Protection against third-party legal liabilities.",
+        "Coverage for damage to the bike due to accidents or theft.",
+        "Personal accident cover for the rider.",
+        "Quick claim settlement and instant digital policy issuance.",
+        "No Claim Bonus (NCB) benefits for claim-free years."
+      ],
+      "waiting_period": "Immediate coverage for accidents and theft upon policy issuance.",
+      "exclusions": [
+        "Normal wear and tear of tires, tubes, and other parts.",
+        "Driving without a valid two-wheeler license.",
+        "Consequential loss not directly resulting from an accident.",
+        "Intentional damage to the vehicle."
+      ],
+      "claim_process": "1. Report accident/theft via app or call. 2. Submit digital photos and documents. 3. Inspection by surveyor. 4. Settlement or cashless repair.",
+      "documents_required": [
+        "Original Policy",
+        "Driving License of the person riding the bike",
+        "RC of the bike",
+        "FIR for theft or third-party injury/death"
+      ],
+      "riders_addons": [
+        "Zero Depreciation",
+        "Personal Accident Cover for Pillion Rider",
+        "Roadside Assistance",
+        "Consumables Cover"
+      ],
+      "tax_savings": "Business use allows the insurance premium to be treated as a tax-deductible business expense.",
+      "free_look_period": "Generally not applicable for standard annual motor insurance.",
+      "renewal_terms": "Renew annually. Multi-year policies (2-3 years) are available to avoid annual renewal and price hikes."
+    },
+    {
+      "name": "Commercial Vehicle Insurance",
+      "eligibility": "Owners of trucks, buses, taxis, and trailers used for business purposes with valid permits.",
+      "benefits": [
+        "Coverage for loss or damage to the commercial vehicle.",
+        "Protection against third-party property damage and bodily injury.",
+        "Owner-driver personal accident cover.",
+        "Protection for goods being carried (with specific cargo add-ons).",
+        "Towing and emergency assistance for heavy vehicles."
+      ],
+      "waiting_period": "No waiting period. Coverage starts as per policy start date.",
+      "exclusions": [
+        "Using the vehicle for purposes other than what is mentioned in the permit.",
+        "Overloading the vehicle beyond the specified weight capacity.",
+        "Driving by an unauthorized person or without a commercial license.",
+        "War, invasion, and nuclear risks."
+      ],
+      "claim_process": "1. Notify insurer. 2. Mandatory FIR for all commercial claims. 3. Detailed survey of vehicle and cargo (if applicable). 4. Final settlement based on survey report.",
+      "documents_required": [
+        "Fitness Certificate",
+        "Route Permit",
+        "Commercial Driving License of the driver",
+        "Registration Certificate (RC)",
+        "Load Challan/Trip Sheet (for goods vehicles)"
+      ],
+      "riders_addons": [
+        "Loss of Income/Daily Allowance",
+        "IMT 23 (Damage to lamps, glass, etc.)",
+        "Legal Liability to Paid Driver and Cleaner",
+        "Towing Cover extension"
+      ],
+      "tax_savings": "Insurance premiums for commercial vehicles are a fully deductible business expense under the Income Tax Act.",
+      "free_look_period": "Rarely applicable for commercial motor insurance.",
+      "renewal_terms": "Annual renewal. Strict adherence to vehicle fitness and permit validity is required for active coverage."
+    }
+  ]
+}
