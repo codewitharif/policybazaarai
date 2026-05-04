@@ -37,7 +37,7 @@ export default function AnalyticsPage() {
         ...(startDate && { startDate }),
         ...(endDate && { endDate })
       });
-      const response = await fetch(`http://localhost:5000/api/analytics/dashboard-stats?${queryParams}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/analytics/dashboard-stats?${queryParams}`);
       const result = await response.json();
       setData(result);
     } catch (error) {

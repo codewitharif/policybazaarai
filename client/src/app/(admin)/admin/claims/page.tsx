@@ -74,7 +74,7 @@ export default function ClaimsPage() {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch(`http://localhost:5000/api/claims?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&status=${filterStatus}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/claims?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&status=${filterStatus}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch claims: ${response.statusText}`);
       }
@@ -135,8 +135,8 @@ export default function ClaimsPage() {
     setSubmitting(true);
     try {
       const url = modalMode === 'edit' 
-        ? `http://localhost:5000/api/claims/${selectedClaim?.id}`
-        : 'http://localhost:5000/api/claims';
+        ? `${process.env.NEXT_PUBLIC_API_URL}/claims/${selectedClaim?.id}`
+        : `${process.env.NEXT_PUBLIC_API_URL}/claims`;
       
       const response = await fetch(url, {
         method: modalMode === 'edit' ? 'PUT' : 'POST',
@@ -158,7 +158,7 @@ export default function ClaimsPage() {
   const handleDeleteClaim = async (id: number) => {
     if (!confirm('Are you sure you want to delete this claim? This action cannot be undone.')) return;
     try {
-      const response = await fetch(`http://localhost:5000/api/claims/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/claims/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) throw new Error('Delete failed');

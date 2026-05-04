@@ -50,7 +50,7 @@ export default function Lead360Modal({ isOpen, onClose, customerId, initialTab =
   const fetchCustomerDetails = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${customerId}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers/${customerId}`);
       const data = await response.json();
       setCustomer(data);
     } catch (error) {

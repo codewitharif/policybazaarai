@@ -49,7 +49,7 @@ export default function UsersPage() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/users');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setUsers(data);
@@ -111,7 +111,7 @@ export default function UsersPage() {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${id}`, {
         method: 'DELETE',
       });
 
@@ -134,8 +134,8 @@ export default function UsersPage() {
 
     try {
       const url = modalMode === 'edit' 
-        ? `http://localhost:5000/api/users/${editingId}`
-        : 'http://localhost:5000/api/users';
+        ? `${process.env.NEXT_PUBLIC_API_URL}/users/${editingId}`
+        : `${process.env.NEXT_PUBLIC_API_URL}/users`;
       
       const method = modalMode === 'edit' ? 'PUT' : 'POST';
       

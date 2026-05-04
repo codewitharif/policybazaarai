@@ -42,7 +42,7 @@ export default function CommunicationLogModal({ isOpen, onClose, customer }: Com
       const userData = localStorage.getItem('user');
       const user = userData ? JSON.parse(userData) : { id: 1 };
 
-      const response = await fetch('http://localhost:5000/api/communication/logs', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/communication/logs`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

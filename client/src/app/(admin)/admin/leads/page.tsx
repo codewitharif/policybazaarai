@@ -69,7 +69,7 @@ export default function LeadsPage() {
   const fetchLeads = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/customers?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&status=${filterStatus}&customer_type=${filterCustomerType}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&status=${filterStatus}&customer_type=${filterCustomerType}`);
       const data = await response.json();
       if (data && Array.isArray(data.customers)) {
         setLeads(data.customers);
@@ -84,7 +84,7 @@ export default function LeadsPage() {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/categories');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setCategories(data);
@@ -120,7 +120,7 @@ export default function LeadsPage() {
     if (!window.confirm('Are you sure you want to delete this lead?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers/${id}`, {
         method: 'DELETE',
       });
 
@@ -161,7 +161,7 @@ export default function LeadsPage() {
 
     setIsUpdating(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${selectedLead.id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers/${selectedLead.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editFormData),
@@ -247,7 +247,7 @@ export default function LeadsPage() {
       let successCount = 0;
       for (const lead of newLeads) {
         try {
-          const response = await fetch('http://localhost:5000/api/customers', {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

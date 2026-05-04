@@ -195,7 +195,7 @@ export default function PayoutsPage() {
         ...(startDate && { startDate }),
         ...(endDate && { endDate })
       });
-      const response = await fetch(`http://localhost:5000/api/payouts?${queryParams}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payouts?${queryParams}`);
       const data = await response.json();
       setPayouts(data.payouts || []);
       setTotalPayouts(data.total || 0);
@@ -207,7 +207,7 @@ export default function PayoutsPage() {
         ...(endDate && { endDate }),
         status: filterStatus
       });
-      const statsResponse = await fetch(`http://localhost:5000/api/payouts?${statsParams}`);
+      const statsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payouts?${statsParams}`);
       const statsData = await statsResponse.json();
       const allPayouts = statsData.payouts || [];
 
@@ -362,7 +362,7 @@ export default function PayoutsPage() {
         ...(startDate && { startDate }),
         ...(endDate && { endDate })
       });
-      const response = await fetch(`http://localhost:5000/api/payouts?${queryParams}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payouts?${queryParams}`);
       const data = await response.json();
       const allFilteredPayouts = data.payouts || [];
 

@@ -43,7 +43,7 @@ export default function DashboardPage() {
     const fetchDashboardSummary = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/analytics/dashboard-summary');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/analytics/dashboard-summary`);
         const result = await response.json();
         setData(result);
       } catch (error) {

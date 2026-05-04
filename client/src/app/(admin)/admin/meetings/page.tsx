@@ -66,7 +66,7 @@ export default function MeetingsPage() {
 
   const fetchConnectionStatus = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/meetings/status');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meetings/status`);
       const data = await response.json();
       setConnectionStatus(data);
     } catch (err) {
@@ -76,7 +76,7 @@ export default function MeetingsPage() {
 
   const fetchMeetings = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/meetings');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meetings`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setMeetings(data);
@@ -106,7 +106,7 @@ export default function MeetingsPage() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/customers?limit=1000');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers?limit=1000`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setCustomers(data);
@@ -120,7 +120,7 @@ export default function MeetingsPage() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/users');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setUsers(data);
@@ -219,7 +219,7 @@ export default function MeetingsPage() {
     if (!window.confirm('Are you sure you want to delete this meeting?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/meetings/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meetings/${id}`, {
         method: 'DELETE',
       });
 
@@ -242,8 +242,8 @@ export default function MeetingsPage() {
 
     try {
       const url = modalMode === 'edit' 
-        ? `http://localhost:5000/api/meetings/${editingId}`
-        : 'http://localhost:5000/api/meetings';
+        ? `${process.env.NEXT_PUBLIC_API_URL}/meetings/${editingId}`
+        : `${process.env.NEXT_PUBLIC_API_URL}/meetings`;
       
       const method = modalMode === 'edit' ? 'PUT' : 'POST';
       
@@ -301,7 +301,7 @@ export default function MeetingsPage() {
         </div>
         <div className="flex items-center gap-3">
           <a 
-            href="http://localhost:5000/api/meetings/google/auth"
+            href={`${process.env.NEXT_PUBLIC_API_URL}/meetings/google/auth`}
             className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold transition-all shadow-sm border ${
               connectionStatus.googleConnected 
                 ? 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100' 
@@ -318,7 +318,7 @@ export default function MeetingsPage() {
             )}
           </a>
           <a 
-            href="http://localhost:5000/api/meetings/zoom/auth"
+            href={`${process.env.NEXT_PUBLIC_API_URL}/meetings/zoom/auth`}
             className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold transition-all shadow-sm border ${
               connectionStatus.zoomConnected 
                 ? 'bg-indigo-50 border-indigo-200 text-indigo-700 hover:bg-indigo-100' 

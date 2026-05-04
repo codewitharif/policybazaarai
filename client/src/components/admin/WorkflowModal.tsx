@@ -62,7 +62,7 @@ export default function WorkflowModal({ isOpen, onClose, onSave, editingWorkflow
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/users');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`);
       if (response.ok) {
         const data = await response.json();
         setUsers(data);

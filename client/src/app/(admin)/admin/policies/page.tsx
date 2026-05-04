@@ -49,7 +49,7 @@ export default function PoliciesPage() {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/categories');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setCategories(data);
@@ -62,7 +62,7 @@ export default function PoliciesPage() {
   const fetchPolicies = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/policies?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&category=${filterCategory}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/policies?page=${currentPage}&limit=${pageSize}&search=${searchTerm}&category=${filterCategory}`);
       const data = await response.json();
       if (data && Array.isArray(data.policies)) {
         setPolicies(data.policies);
@@ -87,7 +87,7 @@ export default function PoliciesPage() {
     if (!window.confirm('Are you sure you want to delete this policy?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/policies/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/policies/${id}`, {
         method: 'DELETE',
       });
 

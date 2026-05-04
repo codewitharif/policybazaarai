@@ -70,7 +70,7 @@ export default function MessageModal({ isOpen, onClose, customer, type }: Messag
       const formData = new FormData();
       formData.append('file', audioBlob, 'recording.wav');
 
-      const response = await fetch('http://localhost:5000/api/communication/stt', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/communication/stt`, {
         method: 'POST',
         body: formData,
       });
@@ -99,7 +99,7 @@ export default function MessageModal({ isOpen, onClose, customer, type }: Messag
       const userData = localStorage.getItem('user');
       const user = userData ? JSON.parse(userData) : { id: 1 };
 
-      const response = await fetch('http://localhost:5000/api/communication/send-message', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/communication/send-message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

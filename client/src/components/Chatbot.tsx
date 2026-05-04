@@ -88,7 +88,7 @@ export default function Chatbot() {
     }
 
     // Initialize socket connection
-    socketRef.current = io('http://localhost:5000');
+    socketRef.current = io(process.env.NEXT_PUBLIC_SOCKET_URL!);
 
     if (savedCustomerId) {
       socketRef.current.emit('identify', { type: 'customer', id: parseInt(savedCustomerId) });
@@ -172,8 +172,7 @@ export default function Chatbot() {
         formDataToSend.append('image', selectedFile);
       }
 
-      const res = await fetch('http://localhost:5000/api/ai/ask', {
-        method: 'POST',
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ai/ask`, {
         body: formDataToSend,
       });
       const data = await res.json();
@@ -204,7 +203,7 @@ export default function Chatbot() {
   const handleGhostWriteText = async (text: string) => {
     setIsTyping(true);
     try {
-      const res = await fetch('http://localhost:5000/api/claims/ghost-write', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/claims/ghost-write`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text }),
@@ -248,7 +247,7 @@ export default function Chatbot() {
 
       console.log('Attempting to upload file:', selectedFile?.name);
 
-      const res = await fetch('http://localhost:5000/api/claims', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/claims`, {
         method: 'POST',
         body: formData,
       });
@@ -277,7 +276,7 @@ export default function Chatbot() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/products');
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
       const data = await res.json();
       if (data && data.length > 0) {
         botReply({
@@ -306,7 +305,7 @@ export default function Chatbot() {
 
   const fetchCategories = async (productName: string) => {
     try {
-      const res = await fetch('http://localhost:5000/api/products');
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
       const data = await res.json();
       const product = data.find((p: any) => p.name === productName);
 
@@ -336,7 +335,7 @@ export default function Chatbot() {
 
   const handleTrackClaim = async (claimId: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/claims?search=${claimId}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/claims?search=${claimId}`);
       const data = await res.json();
       const claim = data.claims?.find((c: any) => c.claim_number.toLowerCase() === claimId.toLowerCase());
       
@@ -377,7 +376,7 @@ Anything else I can help you with?`,
         searchQuery = parseInt(searchQuery).toString();
       }
 
-      const res = await fetch(`http://localhost:5000/api/customers?search=${searchQuery}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers?search=${searchQuery}`);
       const data = await res.json();
       const lead = data.customers?.[0];
       
@@ -412,7 +411,7 @@ An agent will contact you shortly if they haven't already.`,
 
   const fetchPolicies = async (category: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/policies?category=${category}&limit=3`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/policies?category=${category}&limit=3`);
       const data = await res.json();
       
       if (data.policies && data.policies.length > 0) {
@@ -474,7 +473,7 @@ An agent will contact you shortly if they haven't already.`,
       await fetchCategories(option);
     } else if (currentAction === 'SELECT_CATEGORY') {
       try {
-        const res = await fetch('http://localhost:5000/api/categories');
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
         const data = await res.json();
         const category = data.find((c: any) => c.name === option);
         if (category) {
@@ -576,7 +575,7 @@ An agent will contact you shortly if they haven't already.`,
     
     try {
       const categoryId = selectedCategory ? selectedCategory.id : (selectedPolicy ? 11 : null);
-      const res = await fetch('http://localhost:5000/api/customers', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -673,7 +672,7 @@ An agent will contact you shortly if they haven't already.`,
     const currentQuestion = questions[currentQuestionIndex];
     
     try {
-      await fetch('http://localhost:5000/api/question-answers', {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/question-answers`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -735,7 +734,7 @@ An agent will contact you shortly if they haven't already.`,
     formData.append('idCard', idFile);
     
     try {
-      const res = await fetch(`http://localhost:5000/api/customers/verify-biometrics/${createdCustomerId}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers/verify-biometrics/${createdCustomerId}`, {
         method: 'POST',
         body: formData,
       });
@@ -754,7 +753,7 @@ An agent will contact you shortly if they haven't already.`,
         // Proceed to questions if applicable
         const categoryId = selectedCategory ? selectedCategory.id : (selectedPolicy ? 11 : null);
         if (categoryId) {
-          const qRes = await fetch(`http://localhost:5000/api/questions/category/${categoryId}`);
+          const qRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/questions/category/${categoryId}`);
           const qData = await qRes.json();
           
           if (qData && qData.length > 0) {

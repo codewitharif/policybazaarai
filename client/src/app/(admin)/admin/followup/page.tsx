@@ -85,7 +85,7 @@ export default function CommunicationLogPage() {
     setLoading(true);
     try {
       const statusFilter = activeTab === 'all' ? 'All' : activeTab.charAt(0).toUpperCase() + activeTab.slice(1);
-      const response = await fetch(`http://localhost:5000/api/customers?page=${currentPage}&limit=${pageSize}&search=${searchQuery}&status=${statusFilter}&priority=${priorityFilter}&customer_type=${typeFilter}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/customers?page=${currentPage}&limit=${pageSize}&search=${searchQuery}&status=${statusFilter}&priority=${priorityFilter}&customer_type=${typeFilter}`);
       const data = await response.json();
       setCustomers(data.customers || []);
       setTotalCustomers(data.total || 0);

@@ -57,7 +57,7 @@ export default function ChatPage() {
 
   const fetchChatHistory = async (phone: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/communication/chats/history?phone=${phone}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/communication/chats/history?phone=${phone}`);
       if (res.ok) {
         return await res.json();
       }
@@ -82,7 +82,7 @@ export default function ChatPage() {
     }
 
     // Initialize socket connection
-    socketRef.current = io('http://localhost:5000');
+    socketRef.current = io(process.env.NEXT_PUBLIC_SOCKET_URL!);
 
     if (currentUser) {
       socketRef.current.emit('identify', { type: 'agent', id: currentUser.id });
@@ -92,7 +92,7 @@ export default function ChatPage() {
 
     const loadActiveChats = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/communication/chats/active${currentUser ? `?agent_id=${currentUser.id}` : ''}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/communication/chats/active${currentUser ? `?agent_id=${currentUser.id}` : ''}`);
         if (res.ok) {
           const active = await res.json();
           const chatsMap: Record<string, { customer: ChatRequest, messages: Message[] }> = {};

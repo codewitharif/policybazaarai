@@ -65,7 +65,7 @@ export default function SettingsPage() {
     
     try {
       if (activeTab === 'general') {
-        const response = await fetch(`http://localhost:5000/api/users/${formData.id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${formData.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export default function SettingsPage() {
           throw new Error('Password must be at least 6 characters long');
         }
 
-        const response = await fetch(`http://localhost:5000/api/users/change-password/${formData.id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/change-password/${formData.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
