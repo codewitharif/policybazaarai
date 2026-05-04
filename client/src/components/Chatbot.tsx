@@ -173,6 +173,7 @@ export default function Chatbot() {
       }
 
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ai/ask`, {
+        method: 'POST',
         body: formDataToSend,
       });
       const data = await res.json();
