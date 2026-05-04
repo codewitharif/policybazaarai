@@ -10,6 +10,7 @@ import {
   Calendar, 
   Shield, 
   MessageSquare, 
+  MessageCircle, 
   FileText, 
   Activity,
   Loader2,
